@@ -36,3 +36,22 @@
     transform: rotate(360deg);
   }
 }
+
+@font-face {
+  font-family: "Tinos";
+  src: url("./assets/Tinos-Regular.ttf");
+}
+
+@font-face {
+  font-family: "Tinos_Bold";
+  src: url("./assets/Tinos-Bold.ttf");
+}
+
+body {
+  margin: 0px;
+  font-family: "Tinos", "gulim", "dotum", "arial";
+}
+
+.bold {
+  font-family: "Tinos_Bold", "gulim", "dotum", "arial";
+}
