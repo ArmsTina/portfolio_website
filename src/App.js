@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./App.css";
 import Header from "./components/Header";
 import Home from "./pages/Home";
@@ -18,15 +18,17 @@ function App() {
 
   return (
     <div className={darkMode ? "dark-mode" : "light-mode"}>
-      <Header darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/portfolio1" element={<Portfolio1 />} />
-        <Route path="/portfolio2" element={<Portfolio2 />} />
-        <Route path="/portfolio3" element={<Portfolio3 />} />
-        <Route path="/contact" element={<Contact />} />
-      </Routes>
-      <Footer darkMode={darkMode} />
+      <BrowserRouter>
+        <Header darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/portfolio1" element={<Portfolio1 />} />
+          <Route path="/portfolio2" element={<Portfolio2 />} />
+          <Route path="/portfolio3" element={<Portfolio3 />} />
+          <Route path="/contact" element={<Contact />} />
+        </Routes>
+        <Footer darkMode={darkMode} />
+      </BrowserRouter>
     </div>
   );
 }
