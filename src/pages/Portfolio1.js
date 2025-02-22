@@ -112,8 +112,8 @@ export default function Portforlio1({ darkMode }) {
                 <Card.Text className="text-start mt-4">
                   A conceptual capstone project for the Meta Front-End Developer
                   Course, illustrating the Little Lemon restaurant. Includes a
-                  user-friendly interface for exploring the menu, making
-                  reservations, and placing online orders (design only).
+                  user-friendly interface for exploring the menu, and making
+                  reservations (design only).
                 </Card.Text>
                 <Card.Text className="text-start bold">Key Pages:</Card.Text>
                 <ListGroup variant="flush" className="text-start">
