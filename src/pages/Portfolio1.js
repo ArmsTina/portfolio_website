@@ -129,9 +129,6 @@ export default function Portforlio1({ darkMode }) {
                   <ListGroup.Item>
                     📅 Reservations: Book a table online.
                   </ListGroup.Item>
-                  <ListGroup.Item>
-                    🛒 Online Orders: Place an order for delivery.
-                  </ListGroup.Item>
                 </ListGroup>
 
                 <Card.Text className="text-start bold mt-3">
