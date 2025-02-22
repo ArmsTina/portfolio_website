@@ -9,7 +9,7 @@ import Form from "react-bootstrap/Form";
 import InputGroup from "react-bootstrap/InputGroup";
 import Row from "react-bootstrap/Row";
 
-export default function Contact() {
+export default function Contact({ darkMode }) {
   const form = useRef();
   const [showSuccess, setShowSuccess] = useState(false);
   const [showError, setShowError] = useState(false);
@@ -49,7 +49,7 @@ export default function Contact() {
   });
 
   return (
-    <div className="background">
+    <div className={`background ${darkMode ? "background-dark" : ""}`}>
       <Container>
         {showSuccess && (
           <Alert

@@ -16,11 +16,13 @@ import {
 
 export default function Portfolio3({ darkMode }) {
   return (
-    <div className="background portfolio">
+    <div
+      className={`background portfolio ${darkMode ? "background-dark" : ""}`}
+    >
       <Container fluid className="p-5">
         <Row className="d-flex v-center">
           <Col md={12} lg={7}>
-            <Carousel fade className="animated">
+            <Carousel className="animated">
               <Carousel.Item>
                 <Image
                   src={portfolioImage1}
@@ -61,7 +63,10 @@ export default function Portfolio3({ darkMode }) {
                 <Carousel.Caption className="caption-background">
                   <h3>Get in Touch</h3>
                   <p>
-                    Contact me via the form or email at didehddud1005@gmail.com.
+                    Contact me via the form or email at{" "}
+                    <span className="text-primary">
+                      didehddud1005@gmail.com
+                    </span>
                   </p>
                 </Carousel.Caption>
               </Carousel.Item>
@@ -74,11 +79,39 @@ export default function Portfolio3({ darkMode }) {
               }`}
             >
               <Card.Body className="p-4">
-                <Card.Title className="bold">My Portfolio Website</Card.Title>
-                <Card.Subtitle className="mb-3">
-                  Well, you are here!
-                </Card.Subtitle>
-                <Card.Text className="text-start">
+                <Row className="v-center mb-3">
+                  <Col>
+                    <Card.Title className="bold v-center">
+                      My Portfolio Website
+                    </Card.Title>
+                    <Card.Subtitle className="v-center">
+                      Well, you're here!
+                    </Card.Subtitle>
+                  </Col>
+                  <Col className="mt-lg-0 mt-3">
+                    <div className="d-flex gap-2">
+                      <Button
+                        variant="primary"
+                        href="https://dyyang.netlify.app/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        🌍 View Live Site
+                      </Button>
+                      <Button
+                        variant={`${
+                          darkMode ? "outline-light" : "outline-dark"
+                        }`}
+                        href="https://github.com/ArmsTina/portfolio_website"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        🔗 GitHub Repo
+                      </Button>
+                    </div>
+                  </Col>
+                </Row>
+                <Card.Text className="text-start mt-4">
                   This website serves as my personal portfolio, designed to
                   highlight my web development skills and projects. It is
                   structured with a Home page, detailed Portfolio sections, and
@@ -142,24 +175,6 @@ export default function Portfolio3({ darkMode }) {
                     The Contact page allows visitors to easily reach out to me.
                   </ListGroup.Item>
                 </ListGroup>
-                <div className="mt-4 d-flex gap-2">
-                  <Button
-                    variant="primary"
-                    href="https://dyyang.netlify.app/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    🌍 View Live Site
-                  </Button>
-                  <Button
-                    variant={`${darkMode ? "outline-light" : "outline-dark"}`}
-                    href="https://github.com/ArmsTina/portfolio_website"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    🔗 GitHub Repo
-                  </Button>
-                </div>
               </Card.Body>
             </Card>
           </Col>

@@ -1,30 +1,50 @@
 import { React } from "react";
 import "../scss/Home.css";
-import { ListGroup, Container, Row, Col, Image, Card } from "react-bootstrap";
+import {
+  ListGroup,
+  Container,
+  Row,
+  Col,
+  Image,
+  Card,
+  Button,
+} from "react-bootstrap";
 import profileImage from "../assets/Spring_SGA_Arms_Tina.png";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faBook, faPencil, faUserTie } from "@fortawesome/free-solid-svg-icons";
 
 export default function Home({ darkMode }) {
   return (
-    <div id="home-background" className="background">
+    <div
+      id="home-background"
+      className={`background ${darkMode ? "background-dark" : ""}`}
+    >
       <Container fluid>
         <div className="text-center animated">
           <Image
             src={profileImage}
-            roundedCircle
+            rounded
             fluid
             className="profileImage mt-3"
             alt="Profile Picture of Dongyoung"
           />
-          <div className="introduction m-5">
-            <h1 className="mb-3 bold">Hello, I'm Dongyoung.</h1>
+          <div className="introduction mt-4 mb-4 mt-lg-5 mb-lg-5">
+            <h1 className="mb-3 bold">Hello, I'm Dongyoung</h1>
             <h2 className="mb-3">
-              A Computer Science major / Game Design & Dev minor at the
-              University of Arizona.
+              A Computer Science major with a Game Design and Development minor
+              at the University of Arizona.
             </h2>
             <h2 className="mb-3">
-              Passionate about front-end web development with a touch of backend
-              knowledge.
+              I'm passionate about front-end web development and also dabble
+              with backend technologies.
             </h2>
+            <Button
+              variant={`${darkMode ? "dark" : "light"}`}
+              href="/contact"
+              className="button-Home"
+            >
+              ✉️ Contact Me
+            </Button>
           </div>
         </div>
       </Container>
@@ -32,12 +52,13 @@ export default function Home({ darkMode }) {
         <Row>
           <Col md={12} lg={4} className="mt-lg-0 mt-4">
             <Card
-              className={`shadow-sm ${darkMode ? "dark-mode" : "light-mode"}`}
+              className={`roundCard shadow-sm ${
+                darkMode ? "dark-mode" : "light-mode"
+              }`}
             >
               <Card.Body className="p-4">
-                <Card.Title className="fw-bold text-primary">
-                  Biography
-                </Card.Title>
+                <FontAwesomeIcon icon={faBook} className="card-icon" />
+                <Card.Title className="bold cardTitle">Biography</Card.Title>
                 <ListGroup variant="flush" className="text-start">
                   <ListGroup.Item>
                     <span className="bold">University of Arizona</span>
@@ -58,10 +79,13 @@ export default function Home({ darkMode }) {
 
           <Col md={12} lg={4} className="mt-lg-0 mt-4">
             <Card
-              className={`shadow-sm ${darkMode ? "dark-mode" : "light-mode"}`}
+              className={`roundCard shadow-sm ${
+                darkMode ? "dark-mode" : "light-mode"
+              }`}
             >
               <Card.Body className="p-4">
-                <Card.Title className="fw-bold text-info">Skills</Card.Title>
+                <FontAwesomeIcon icon={faPencil} className="card-icon" />
+                <Card.Title className="bold cardTitle">Skills</Card.Title>
                 <ListGroup variant="flush" className="text-start">
                   <ListGroup.Item>
                     <span className="bold">Frontend:</span> JavaScript, HTML,
@@ -91,12 +115,13 @@ export default function Home({ darkMode }) {
 
           <Col md={12} lg={4} className="mt-lg-0 mt-4">
             <Card
-              className={`shadow-sm ${darkMode ? "dark-mode" : "light-mode"}`}
+              className={`roundCard shadow-sm ${
+                darkMode ? "dark-mode" : "light-mode"
+              }`}
             >
               <Card.Body className="p-4">
-                <Card.Title className="fw-bold text-warning">
-                  Experience
-                </Card.Title>
+                <FontAwesomeIcon icon={faUserTie} className="card-icon" />
+                <Card.Title className="bold cardTitle">Experience</Card.Title>
                 <ListGroup variant="flush" className="text-start">
                   <ListGroup.Item>
                     <span className="bold">

@@ -16,11 +16,13 @@ import {
 
 export default function Portfolio2({ darkMode }) {
   return (
-    <div className="background portfolio">
+    <div
+      className={`background portfolio ${darkMode ? "background-dark" : ""}`}
+    >
       <Container fluid className="p-5">
         <Row className="d-flex v-center">
           <Col md={12} lg={7}>
-            <Carousel fade className="animated">
+            <Carousel className="animated">
               <Carousel.Item>
                 <Image
                   src={portfolioImage1}
@@ -68,11 +70,39 @@ export default function Portfolio2({ darkMode }) {
               }`}
             >
               <Card.Body className="p-4">
-                <Card.Title className="bold">Wordle Game Website</Card.Title>
-                <Card.Subtitle className="mb-3">
-                  CSC 337 Final Group Project
-                </Card.Subtitle>
-                <Card.Text className="text-start">
+                <Row className="v-center mb-3">
+                  <Col>
+                    <Card.Title className="bold v-center">
+                      Wordle Game Website
+                    </Card.Title>
+                    <Card.Subtitle className="v-center">
+                      CSC 337 Final Group Project
+                    </Card.Subtitle>
+                  </Col>
+                  <Col className="mt-lg-0 mt-3">
+                    <div className="d-flex gap-2">
+                      <Button
+                        variant="primary"
+                        href="https://csc337final.duckdns.org/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        🌍 View Live Site
+                      </Button>
+                      <Button
+                        variant={`${
+                          darkMode ? "outline-light" : "outline-dark"
+                        }`}
+                        href="https://github.com/ArmsTina/337_Final_Public/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        🔗 GitHub Repo
+                      </Button>
+                    </div>
+                  </Col>
+                </Row>
+                <Card.Text className="text-start mt-4">
                   Leading the development for this CSC 337 project at the
                   University of Arizona, I built the backend with Express.js and
                   MongoDB, and provided key revisions to the React frontend,
@@ -132,25 +162,6 @@ export default function Portfolio2({ darkMode }) {
                     HTTPS and implementing password security using bcrypt.
                   </ListGroup.Item>
                 </ListGroup>
-
-                <div className="mt-4 d-flex gap-2">
-                  <Button
-                    variant="primary"
-                    href="https://csc337final.duckdns.org/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    🌍 View Live Site
-                  </Button>
-                  <Button
-                    variant={`${darkMode ? "outline-light" : "outline-dark"}`}
-                    href="https://github.com/ArmsTina/337_Final_Public/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    🔗 GitHub Repo
-                  </Button>
-                </div>
               </Card.Body>
             </Card>
           </Col>

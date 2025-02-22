@@ -16,11 +16,13 @@ import {
 
 export default function Portforlio1({ darkMode }) {
   return (
-    <div className="background portfolio">
+    <div
+      className={`background portfolio ${darkMode ? "background-dark" : ""}`}
+    >
       <Container fluid className="p-5">
         <Row className="d-flex v-center">
           <Col md={12} lg={7}>
-            <Carousel fade className="animated">
+            <Carousel className="animated">
               <Carousel.Item>
                 <Image
                   src={portfolioImage1}
@@ -75,17 +77,44 @@ export default function Portforlio1({ darkMode }) {
               }`}
             >
               <Card.Body className="p-4">
-                <Card.Title className="bold">Little Lemon Website</Card.Title>
-                <Card.Subtitle className="mb-3">
-                  Meta Frontend Capstone Project
-                </Card.Subtitle>
-                <Card.Text className="text-start">
+                <Row className="v-center mb-3">
+                  <Col>
+                    <Card.Title className="bold v-center">
+                      Little Lemon Website
+                    </Card.Title>
+                    <Card.Subtitle className="v-center">
+                      Meta Frontend Capstone Project
+                    </Card.Subtitle>
+                  </Col>
+                  <Col className="mt-lg-0 mt-3">
+                    <div className="d-flex gap-2">
+                      <Button
+                        variant="primary"
+                        href="https://dylittlelemon.netlify.app/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        🌍 View Live Site
+                      </Button>
+                      <Button
+                        variant={`${
+                          darkMode ? "outline-light" : "outline-dark"
+                        }`}
+                        href="https://github.com/ArmsTina/meta_front_capstone"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        🔗 GitHub Repo
+                      </Button>
+                    </div>
+                  </Col>
+                </Row>
+                <Card.Text className="text-start mt-4">
                   A conceptual capstone project for the Meta Front-End Developer
                   Course, illustrating the Little Lemon restaurant. Includes a
                   user-friendly interface for exploring the menu, making
                   reservations, and placing online orders (design only).
                 </Card.Text>
-
                 <Card.Text className="text-start bold">Key Pages:</Card.Text>
                 <ListGroup variant="flush" className="text-start">
                   <ListGroup.Item>
@@ -128,25 +157,6 @@ export default function Portforlio1({ darkMode }) {
                     ✅ Yup: For robust form validation.
                   </ListGroup.Item>
                 </ListGroup>
-
-                <div className="mt-4 d-flex gap-2">
-                  <Button
-                    variant="primary"
-                    href="https://dylittlelemon.netlify.app/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    🌍 View Live Site
-                  </Button>
-                  <Button
-                    variant={`${darkMode ? "outline-light" : "outline-dark"}`}
-                    href="https://github.com/ArmsTina/meta_front_capstone"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    🔗 GitHub Repo
-                  </Button>
-                </div>
               </Card.Body>
             </Card>
           </Col>

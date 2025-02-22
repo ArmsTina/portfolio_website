@@ -1,10 +1,36 @@
 #home-background {
   height: 100%;
   flex-direction: column;
-
   .profileImage {
     max-width: 500px;
   }
+}
+
+.card-icon {
+  background-color: black;
+  border: 3px solid white;
+  border-radius: 50px;
+  width: 60px;
+  height: 40px;
+  color: white;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.roundCard {
+  border-radius: 50px !important;
+}
+
+.cardTitle {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.button-Home {
+  padding-top: 10px;
+  width: 200px;
+  height: 50px;
+  font-size: 1.2rem;
 }
 
 /* Responsive settings */

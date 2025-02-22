@@ -41,7 +41,7 @@ function App() {
             path="/portfolio3"
             element={<Portfolio3 darkMode={darkMode} />}
           />
-          <Route path="/contact" element={<Contact />} />
+          <Route path="/contact" element={<Contact darkMode={darkMode} />} />
         </Routes>
         <Footer darkMode={darkMode} />
       </BrowserRouter>
