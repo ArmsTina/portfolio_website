@@ -71,11 +71,11 @@ export default function Home({ darkMode }) {
                     MongoDB, SQL
                   </ListGroup.Item>
                   <ListGroup.Item>
-                    <span className="bold">Database & CMS:</span> MySQL, MongoDB
+                    <span className="bold">Database:</span> MySQL, MongoDB
                   </ListGroup.Item>
                   <ListGroup.Item>
-                    <span className="bold">Tools & Platforms:</span> AWS,
-                    DigitalOcean, Google Sheets, Word, Excel
+                    <span className="bold">Tools & Platforms:</span> Git, Github
+                    AWS, DigitalOcean, Google Sheets, MSOffice
                   </ListGroup.Item>
                   <ListGroup.Item>
                     <span className="bold">Game Development:</span> Unity, C#
