@@ -15,6 +15,7 @@ This README is revised by Chat-GPT.
 - [Technologies Used](#technologies-used)
 - [Installation](#installation)
 - [Usage](#usage)
+- [Environment Variables](#environment-variables)
 - [Contact](#contact)
 
 ## Description
@@ -62,6 +63,14 @@ This portfolio website serves as a comprehensive overview of my web development 
     ```bash
     npm install  # or yarn install
     ```
+    
+## Environment Variables
+
+This project uses environment variables to store sensitive information, such as EmailJS keys. You will need to create a `.env` file in the root directory of the project and add the following variables:
+
+-   `REACT_APP_Mail_Public_Key`: Your EmailJS public key.
+-   `REACT_APP_Mail_Service_Key`: Your EmailJS service key.
+-   `REACT_APP_Mail_Template_Key`: Your EmailJS template key.
 
 ## Usage
 
