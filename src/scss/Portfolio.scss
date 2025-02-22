@@ -1,0 +1,46 @@
+.portfolio {
+  height: 100%;
+}
+
+.explaination {
+  height: 100%;
+}
+
+.carousel {
+  img {
+    filter: contrast(70%);
+  }
+}
+
+.caption-background {
+  padding: 5px 16px 5px 16px;
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 10px;
+  border-radius: 8px;
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+}
+
+.carousel-control-next,
+.carousel-control-prev {
+  filter: invert(100%);
+}
+
+.v-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media screen and (max-width: 576px) {
+  .carousel {
+    img {
+      width: 100%;
+      height: 500px;
+      object-fit: cover;
+    }
+  }
+}

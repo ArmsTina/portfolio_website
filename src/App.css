@@ -1,42 +1,4 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
+/* Default Design */
 @font-face {
   font-family: "Tinos";
   src: url("./assets/Tinos-Regular.ttf");
@@ -49,9 +11,84 @@
 
 body {
   margin: 0px;
-  font-family: "Tinos", "gulim", "dotum", "arial";
+  font-family: "Tinos", "gulim", "dotum", "arial" !important;
 }
 
 .bold {
-  font-family: "Tinos_Bold", "gulim", "dotum", "arial";
+  font-family: "Tinos_Bold", "gulim", "dotum", "arial" !important;
+}
+
+.background {
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+  background: url("./assets/home_landing.jpeg") no-repeat center center/cover;
+  color: white;
+
+  /* https://stackoverflow.com/questions/9182978/semi-transparent-color-layer-over-background-image*/
+  box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.7);
+}
+
+/* Animation top-to-bottom */
+
+.animated {
+  opacity: 0;
+  animation: toptobottom 1s forwards;
+}
+
+.animated-delay {
+  opacity: 0;
+  animation: toptobottom 1s 0.3s forwards;
+}
+
+@keyframes toptobottom {
+  0% {
+    transform: translateY(-200px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+/* Dark - Light mode settings */
+
+.light-mode {
+  background-color: #f5f5f5 !important;
+  color: black !important;
+
+  .list-group-item {
+    background-color: #f5f5f5 !important;
+    color: black !important;
+  }
+}
+
+.dark-mode {
+  background-color: #1a1a1a !important;
+  color: white !important;
+
+  .list-group-item {
+    background-color: #1a1a1a !important;
+    color: white !important;
+  }
+}
+
+.dark-mode-toggle {
+  cursor: pointer;
+  .icon {
+    border-radius: 50px;
+    width: 30px;
+    height: 30px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-top: 3px;
+    margin-right: 16px;
+  }
+}
+
+.dark-mode-btn {
+  background-color: white !important;
 }

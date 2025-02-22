@@ -9,7 +9,7 @@ import Form from "react-bootstrap/Form";
 import InputGroup from "react-bootstrap/InputGroup";
 import Row from "react-bootstrap/Row";
 
-function Contact() {
+export default function Contact() {
   const form = useRef();
   const [showSuccess, setShowSuccess] = useState(false);
   const [showError, setShowError] = useState(false);
@@ -154,5 +154,3 @@ function Contact() {
     </div>
   );
 }
-
-export default Contact;

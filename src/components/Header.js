@@ -37,10 +37,10 @@ function Header({ darkMode, toggleDarkMode }) {
                   Little Lemon Restaurant
                 </NavDropdown.Item>
                 <NavDropdown.Item href="/portfolio2">
-                  Wordle Game Page
+                  Wordle Game Website
                 </NavDropdown.Item>
                 <NavDropdown.Item href="/portfolio3">
-                  Dashboard Page
+                  Portfolio Website
                 </NavDropdown.Item>
               </NavDropdown>
               <Nav.Link href="/contact">CONTACT</Nav.Link>
