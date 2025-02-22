@@ -119,6 +119,7 @@ export default function Portforlio1({ darkMode }) {
                     variant="primary"
                     href="https://dylittlelemon.netlify.app/"
                     target="_blank"
+                    rel="noopener noreferrer"
                   >
                     🌍 View Live Site
                   </Button>
@@ -126,6 +127,7 @@ export default function Portforlio1({ darkMode }) {
                     variant={`${darkMode ? "outline-light" : "outline-dark"}`}
                     href="https://github.com/ArmsTina/meta_front_capstone"
                     target="_blank"
+                    rel="noopener noreferrer"
                   >
                     🔗 GitHub Repo
                   </Button>

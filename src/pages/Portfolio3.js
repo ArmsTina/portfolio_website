@@ -132,6 +132,7 @@ export default function Portfolio3({ darkMode }) {
                     variant="primary"
                     href="https://dyyang.netlify.app/"
                     target="_blank"
+                    rel="noopener noreferrer"
                   >
                     🌍 View Live Site
                   </Button>
@@ -139,6 +140,7 @@ export default function Portfolio3({ darkMode }) {
                     variant={`${darkMode ? "outline-light" : "outline-dark"}`}
                     href="https://github.com/ArmsTina/portfolio_website"
                     target="_blank"
+                    rel="noopener noreferrer"
                   >
                     🔗 GitHub Repo
                   </Button>

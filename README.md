@@ -1,70 +1,81 @@
-# Getting Started with Create React App
+# My Portfolio Website
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This repository contains the code for my personal portfolio website, designed to showcase my web development skills and projects.
+This README is revised by Chat-GPT.
 
-## Available Scripts
+## Live Site
 
-In the project directory, you can run:
+- [Live Portfolio Website](https://dyyang.netlify.app/)
 
-### `npm start`
+## Table of Contents
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- [Description](#description)
+- [Features](#features)
+- [Technologies Used](#technologies-used)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Contact](#contact)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Description
 
-### `npm test`
+This portfolio website serves as a comprehensive overview of my web development journey. It is structured to provide visitors with a clear understanding of my skills, projects, and experience. The site includes:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- **Home Page:** An introduction and overview of my background and skills.
+- **Portfolio Pages (1-3):** Detailed showcases of my projects, including descriptions, images, and links to live demos and GitHub repositories.
+- **Contact Page:** A form and email address for easy communication.
 
-### `npm run build`
+## Features
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- **Responsive Design:** Ensures optimal viewing experience on various devices.
+- **Dark/Light Mode Toggle:** Provides user-friendly theme customization.
+- **Dynamic UI Rendering:** Utilizes React for a smooth and interactive user experience.
+- **Contact Form:** Implemented with Formik and Yup for efficient handling and validation.
+- **Email Integration:** Uses EmailJS for seamless message delivery.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Technologies Used
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- **React:** For building the user interface.
+- **React Bootstrap:** For responsive and customizable UI components.
+- **Formik:** For managing form state and handling form submissions.
+- **Yup:** For form validation.
+- **EmailJS:** For integrating email functionality into the contact form.
+- **Custom CSS/SCSS:** For unique styling and animations.
+- **npm/yarn:** For package management.
 
-### `npm run eject`
+## Installation
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+1.  **Clone the repository:**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+    ```bash
+    git clone [https://github.com/ArmsTina/portfolio_website](https://github.com/ArmsTina/portfolio_website)
+    ```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+2.  **Navigate to the project directory:**
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+    ```bash
+    cd 337_Final_Public
+    ```
 
-## Learn More
+3.  **Install dependencies:**
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+    ```bash
+    npm install  # or yarn install
+    ```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Usage
 
-### Code Splitting
+1.  **Start the development server:**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+    ```bash
+    npm start  # or yarn start
+    ```
 
-### Analyzing the Bundle Size
+2.  **Open the website in your browser:**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+    Navigate to `http://localhost:3000` in your web browser.
 
-### Making a Progressive Web App
+## Contact
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+For any inquiries or feedback, please feel free to contact me:
 
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- **Email:** didehddud1005@gmail.com

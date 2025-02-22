@@ -116,7 +116,11 @@ export default function Home({ darkMode }) {
                   <ListGroup.Item>
                     <span className="bold">Projects:</span> Web & Game
                     Development (Check my{" "}
-                    <a href="https://github.com/ArmsTina" target="_blank">
+                    <a
+                      href="https://github.com/ArmsTina"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
                       Github!
                     </a>
                     )

@@ -123,6 +123,7 @@ export default function Portfolio2({ darkMode }) {
                     variant="primary"
                     href="https://csc337final.duckdns.org/"
                     target="_blank"
+                    rel="noopener noreferrer"
                   >
                     🌍 View Live Site
                   </Button>
@@ -130,6 +131,7 @@ export default function Portfolio2({ darkMode }) {
                     variant={`${darkMode ? "outline-light" : "outline-dark"}`}
                     href="https://github.com/ArmsTina/337_Final_Public/"
                     target="_blank"
+                    rel="noopener noreferrer"
                   >
                     🔗 GitHub Repo
                   </Button>
