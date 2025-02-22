@@ -22,7 +22,12 @@ export default function Portfolio3({ darkMode }) {
           <Col md={12} lg={7}>
             <Carousel fade className="animated">
               <Carousel.Item>
-                <Image src={portfolioImage1} rounded fluid />
+                <Image
+                  src={portfolioImage1}
+                  rounded
+                  fluid
+                  alt="Portfolio 3 Home"
+                />
                 <Carousel.Caption className="caption-background">
                   <h3>Responsive Webpage</h3>
                   <p>
@@ -32,7 +37,12 @@ export default function Portfolio3({ darkMode }) {
                 </Carousel.Caption>
               </Carousel.Item>
               <Carousel.Item>
-                <Image src={portfolioImage2} rounded fluid />
+                <Image
+                  src={portfolioImage2}
+                  rounded
+                  fluid
+                  alt="Portfolio 3 Portfolio Page"
+                />
                 <Carousel.Caption className="caption-background">
                   <h3>Portfolio Showcase</h3>
                   <p>
@@ -42,7 +52,12 @@ export default function Portfolio3({ darkMode }) {
                 </Carousel.Caption>
               </Carousel.Item>
               <Carousel.Item>
-                <Image src={portfolioImage3} rounded fluid />
+                <Image
+                  src={portfolioImage3}
+                  rounded
+                  fluid
+                  alt="Portfolio 3 Contact Page"
+                />
                 <Carousel.Caption className="caption-background">
                   <h3>Get in Touch</h3>
                   <p>

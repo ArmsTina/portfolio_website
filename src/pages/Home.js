@@ -13,6 +13,7 @@ export default function Home({ darkMode }) {
             roundedCircle
             fluid
             className="profileImage mt-3"
+            alt="Profile Picture of Dongyoung"
           />
           <div className="introduction m-5">
             <h1 className="mb-3 bold">Hello, I'm Dongyoung.</h1>

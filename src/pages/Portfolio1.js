@@ -22,7 +22,12 @@ export default function Portforlio1({ darkMode }) {
           <Col md={12} lg={7}>
             <Carousel fade className="animated">
               <Carousel.Item>
-                <Image src={portfolioImage1} rounded fluid />
+                <Image
+                  src={portfolioImage1}
+                  rounded
+                  fluid
+                  alt="Portfolio 1 Homepage"
+                />
                 <Carousel.Caption className="caption-background">
                   <h3>Home Page</h3>
                   <p>
@@ -32,7 +37,12 @@ export default function Portforlio1({ darkMode }) {
                 </Carousel.Caption>
               </Carousel.Item>
               <Carousel.Item>
-                <Image src={portfolioImage2} rounded fluid />
+                <Image
+                  src={portfolioImage2}
+                  rounded
+                  fluid
+                  alt="Portfolio 1 Google Map API"
+                />
                 <Carousel.Caption className="caption-background">
                   <h3>Google Maps Integration</h3>
                   <p>
@@ -42,7 +52,12 @@ export default function Portforlio1({ darkMode }) {
                 </Carousel.Caption>
               </Carousel.Item>
               <Carousel.Item>
-                <Image src={portfolioImage3} rounded fluid />
+                <Image
+                  src={portfolioImage3}
+                  rounded
+                  fluid
+                  alt="Portfolio 1 Reservation Form"
+                />
                 <Carousel.Caption className="caption-background">
                   <h3>Reservation Form</h3>
                   <p>

@@ -22,21 +22,36 @@ export default function Portfolio2({ darkMode }) {
           <Col md={12} lg={7}>
             <Carousel fade className="animated">
               <Carousel.Item>
-                <Image src={portfolioImage1} rounded fluid />
+                <Image
+                  src={portfolioImage1}
+                  rounded
+                  fluid
+                  alt="Portfolio 2 Game Page"
+                />
                 <Carousel.Caption className="caption-background">
                   <h3>Game Page</h3>
                   <p>Interactive game interface for the Wordle platform.</p>
                 </Carousel.Caption>
               </Carousel.Item>
               <Carousel.Item>
-                <Image src={portfolioImage2} rounded fluid />
+                <Image
+                  src={portfolioImage2}
+                  rounded
+                  fluid
+                  alt="Portfolio 2 Leaderboard Page"
+                />
                 <Carousel.Caption className="caption-background">
                   <h3>Leaderboard</h3>
                   <p>Displays top player scores with real-time updates.</p>
                 </Carousel.Caption>
               </Carousel.Item>
               <Carousel.Item>
-                <Image src={portfolioImage3} rounded fluid />
+                <Image
+                  src={portfolioImage3}
+                  rounded
+                  fluid
+                  alt="Portfolio 2 Account Setting Page"
+                />
                 <Carousel.Caption className="caption-background">
                   <h3>Account Setting</h3>
                   <p>
