@@ -78,7 +78,7 @@ export default function Portforlio1({ darkMode }) {
             >
               <Card.Body className="p-4">
                 <Row className="v-center mb-3">
-                  <Col>
+                  <Col md={12} xl={6}>
                     <Card.Title className="bold v-center">
                       Little Lemon Website
                     </Card.Title>
@@ -86,7 +86,7 @@ export default function Portforlio1({ darkMode }) {
                       Meta Frontend Capstone Project
                     </Card.Subtitle>
                   </Col>
-                  <Col className="mt-lg-0 mt-3">
+                  <Col md={12} xl={6} className="mt-lg-0 mt-3">
                     <div className="d-flex gap-2">
                       <Button
                         variant="primary"

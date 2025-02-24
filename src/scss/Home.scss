@@ -6,25 +6,45 @@
   }
 }
 
-.card-icon {
-  background-color: black;
-  border: 3px solid white;
+.card-icon-light {
+  background-color: white;
+  border: 3px solid black;
   border-radius: 50px;
   width: 60px;
   height: 40px;
-  color: white;
+  color: black;
   padding-top: 10px;
   padding-bottom: 10px;
 }
 
+.card-icon-dark {
+  background-color: rgb(0, 0, 0);
+  border: 3px solid white;
+  color: white;
+}
+
 .roundCard {
   border-radius: 50px !important;
+  width: 500px;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
 }
 
 .cardTitle {
   font-size: 1.5rem;
   margin-bottom: 2rem;
 }
+
+.card-body {
+  height: 480px;
+}
+
+// .text-green {
+//   color: #0cb55e;
+// }
 
 .button-Home {
   padding-top: 10px;

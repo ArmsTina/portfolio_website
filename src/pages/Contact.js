@@ -1,13 +1,17 @@
 import React, { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
-import { Container, Card, Alert } from "react-bootstrap";
+import {
+  Container,
+  Card,
+  Alert,
+  Button,
+  Form,
+  InputGroup,
+  Row,
+} from "react-bootstrap";
 import "../scss/Contact.css";
 import * as formik from "formik";
 import * as Yup from "yup";
-import Button from "react-bootstrap/Button";
-import Form from "react-bootstrap/Form";
-import InputGroup from "react-bootstrap/InputGroup";
-import Row from "react-bootstrap/Row";
 
 export default function Contact({ darkMode }) {
   const form = useRef();
@@ -49,8 +53,12 @@ export default function Contact({ darkMode }) {
   });
 
   return (
-    <div className={`background ${darkMode ? "background-dark" : ""}`}>
-      <Container>
+    <div
+      className={`background background-contact ${
+        darkMode ? "background-dark" : ""
+      }`}
+    >
+      <Container className="d-flex justify-content-center p-5">
         {showSuccess && (
           <Alert
             variant="success"
@@ -72,13 +80,9 @@ export default function Contact({ darkMode }) {
             Failed to send the message. Please try again later.
           </Alert>
         )}
-
-        <Card
-          className="shadow-lg p-4"
-          style={{ maxWidth: "500px", margin: "auto" }}
-        >
+        <Card className="shadow-lg card-contact">
           <Card.Body>
-            <h2 className="mb-4">Contact</h2>
+            <h1 className="mb-4">Contact</h1>
             <Formik
               validationSchema={schema}
               onSubmit={sendEmail}
@@ -90,7 +94,7 @@ export default function Contact({ darkMode }) {
             >
               {({ handleSubmit, handleChange, values, touched, errors }) => (
                 <Form noValidate onSubmit={handleSubmit} ref={form}>
-                  <Row>
+                  <Row className="text-start">
                     <Form.Group className="mb-3">
                       <Form.Label>Your Name</Form.Label>
                       <Form.Control
@@ -128,7 +132,7 @@ export default function Contact({ darkMode }) {
                       <InputGroup hasValidation>
                         <Form.Control
                           as="textarea"
-                          rows={4}
+                          rows={6}
                           className="shadow-sm rounded"
                           placeholder="Write your message..."
                           name="message"

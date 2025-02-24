@@ -28,11 +28,13 @@ body {
   background: url("./assets/home_landing.jpg") no-repeat center center/cover;
   color: white;
   /* https://stackoverflow.com/questions/9182978/semi-transparent-color-layer-over-background-image*/
-  box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.5);
+  box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.7);
+  /*background-color: #0f6e3c;*/
 }
 
 .background-dark {
   box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.7);
+  /*background-color: rgba(10, 145, 75, 0.7);*/
 }
 
 /* Animation top-to-bottom */
