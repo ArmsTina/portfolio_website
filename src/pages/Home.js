@@ -38,12 +38,20 @@ export default function Home({ darkMode }) {
               I'm passionate about front-end web development and also dabble
               with backend technologies.
             </h2>
+
             <Button
               variant={`${darkMode ? "dark" : "light"}`}
               href="/contact"
-              className="button-Home"
+              className="button-Home m-2"
             >
               ✉️ Contact Me
+            </Button>
+            <Button
+              variant={`${darkMode ? "dark" : "light"}`}
+              href="/contact"
+              className="button-Home m-2"
+            >
+              📝 Resume
             </Button>
           </div>
         </div>
