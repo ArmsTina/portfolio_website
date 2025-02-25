@@ -48,7 +48,9 @@ export default function Home({ darkMode }) {
             </Button>
             <Button
               variant={`${darkMode ? "dark" : "light"}`}
-              href="/contact"
+              href="https://github.com/ArmsTina/portfolio_website/blob/05017959fb3aa81a21b7c6c129febe0fe2bdb975/src/assets/Dongyoung%20Yang%20-%20Resume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
               className="button-Home m-2"
             >
               📝 Resume
