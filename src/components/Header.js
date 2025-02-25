@@ -42,6 +42,14 @@ function Header({ darkMode, toggleDarkMode }) {
                 <NavDropdown.Item href="/portfolio3">
                   Portfolio Website
                 </NavDropdown.Item>
+                <NavDropdown.Divider />
+                <NavDropdown.Item
+                  href="https://github.com/ArmsTina"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  More Projects on Github!
+                </NavDropdown.Item>
               </NavDropdown>
               <Nav.Link href="/contact">CONTACT</Nav.Link>
             </Nav>
