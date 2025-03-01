@@ -69,7 +69,7 @@ export default function Portfolio2({ darkMode }) {
                 darkMode ? "dark-mode" : "light-mode"
               }`}
             >
-              <Card.Body className="p-4">
+              <Card.Body className="p-4 mw-100">
                 <Row className="v-center mb-3">
                   <Col md={12} xl={6}>
                     <Card.Title className="bold v-center">

@@ -2,11 +2,7 @@ import React from "react";
 import Container from "react-bootstrap/Container";
 import "../scss/Footer.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faGithub,
-  faLinkedin,
-  faInstagram,
-} from "@fortawesome/free-brands-svg-icons";
+import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 
 function Footer({ darkMode }) {
   return (
@@ -27,13 +23,6 @@ function Footer({ darkMode }) {
         rel="noopener noreferrer"
       >
         <FontAwesomeIcon icon={faLinkedin} className="icon" />
-      </a>
-      <a
-        href="https://www.instagram.com/arms.tina/"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <FontAwesomeIcon icon={faInstagram} className="icon" />
       </a>
       <p>© Dongyoung Yang</p>
     </Container>

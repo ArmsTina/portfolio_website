@@ -21,41 +21,49 @@ export default function Home({ darkMode }) {
     >
       <Container fluid className="mt-5">
         <div className="animated">
-          <Image
-            src={profileImage}
-            rounded
-            fluid
-            className="profileImage mt-3"
-            alt="Profile Picture of Dongyoung"
-          />
-          <div className={`introduction mt-4 mb-4 mt-lg-5 mb-lg-5 text-white`}>
-            <h1 className="mb-3 p-3 bold">Hello, I'm Dongyoung</h1>
-            <h2 className="mb-3">
-              A Computer Science major with a Game Design and Development minor
-              at the University of Arizona.
-            </h2>
-            <h2 className="mb-5">
-              I'm passionate about front-end web development and also dabble
-              with backend technologies.
-            </h2>
+          <Row>
+            <Col md={12} lg={5}>
+              <Image
+                src={profileImage}
+                rounded
+                fluid
+                className="profileImage mt-3"
+                alt="Profile Picture of Dongyoung"
+              />
+            </Col>
+            <Col md={12} lg={7}>
+              <div
+                className={`introduction mt-4 mb-4 mt-lg-5 mb-lg-5 text-white`}
+              >
+                <h1 className="mb-3 p-3 bold">Hello, I'm Dongyoung</h1>
+                <h2 className="mb-3">
+                  A Computer Science major with a Game Design and Development
+                  minor at the University of Arizona.
+                </h2>
+                <h2 className="mb-5">
+                  I'm passionate about front-end web development and also dabble
+                  with backend technologies.
+                </h2>
+              </div>
+            </Col>
+          </Row>
 
-            <Button
-              variant={`${darkMode ? "dark" : "light"}`}
-              href="/contact"
-              className="button-Home m-2"
-            >
-              ✉️ Contact Me
-            </Button>
-            <Button
-              variant={`${darkMode ? "dark" : "light"}`}
-              href="https://github.com/ArmsTina/portfolio_website/blob/05017959fb3aa81a21b7c6c129febe0fe2bdb975/src/assets/Dongyoung%20Yang%20-%20Resume.pdf"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="button-Home m-2"
-            >
-              📝 Resume
-            </Button>
-          </div>
+          <Button
+            variant={`${darkMode ? "dark" : "light"}`}
+            href="/contact"
+            className="button-Home m-2"
+          >
+            ✉️ Contact Me
+          </Button>
+          <Button
+            variant={`${darkMode ? "dark" : "light"}`}
+            href="https://github.com/ArmsTina/portfolio_website/blob/05017959fb3aa81a21b7c6c129febe0fe2bdb975/src/assets/Dongyoung%20Yang%20-%20Resume.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="button-Home m-2"
+          >
+            📝 Resume
+          </Button>
         </div>
       </Container>
       <Container fluid className="mt-3 mb-5 animated-delay">

@@ -19,4 +19,10 @@
 .card-body {
   max-width: 600px;
   height: auto;
+}
+
+@media screen and (max-height: 700px) {
+  .background-contact {
+    height: 100%;
+  }
 }/*# sourceMappingURL=Contact.css.map */
