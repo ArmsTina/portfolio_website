@@ -13,8 +13,8 @@ function Header({ darkMode, toggleDarkMode }) {
     <div className={`header ${darkMode ? "dark-mode" : "light-mode"}`}>
       <Navbar expand="lg">
         <Container fluid>
-          <Navbar.Brand className="me-auto">
-            <Link to="/">DONGYOUNG YANG</Link>
+          <Navbar.Brand as={Link} to="/" className="me-auto">
+            DONGYOUNG YANG
           </Navbar.Brand>
 
           <div className="d-flex align-items-center order-md-1 order-lg-2">
@@ -32,16 +32,18 @@ function Header({ darkMode, toggleDarkMode }) {
             className="order-md-2 order-lg-1"
           >
             <Nav className="ms-auto">
-              <Nav.Link><Link to="/">HOME</Link></Nav.Link>
+              <Nav.Link as={Link} to="/">
+                HOME
+              </Nav.Link>
               <NavDropdown title="PORTFOLIO" id="basic-nav-dropdown">
-                <NavDropdown.Item>
-                  <Link to="/portfolio1">Little Lemon Restaurant</Link>
+                <NavDropdown.Item as={Link} to="/portfolio1">
+                  Little Lemon Restaurant
                 </NavDropdown.Item>
-                <NavDropdown.Item>
-                  <Link to="/portfolio2" >Wordle Game Website</Link>
+                <NavDropdown.Item as={Link} to="/portfolio2">
+                  Wordle Game Website
                 </NavDropdown.Item>
-                <NavDropdown.Item>
-                  <Link to="/portfolio3">Portfolio Website</Link>
+                <NavDropdown.Item as={Link} to="/portfolio3">
+                  Portfolio Website
                 </NavDropdown.Item>
                 <NavDropdown.Divider />
                 <NavDropdown.Item
@@ -52,7 +54,9 @@ function Header({ darkMode, toggleDarkMode }) {
                   More Projects on Github!
                 </NavDropdown.Item>
               </NavDropdown>
-              <Nav.Link><Link to="/contact">CONTACT</Link></Nav.Link>
+              <Nav.Link as={Link} to="/contact">
+                CONTACT
+              </Nav.Link>
             </Nav>
           </Navbar.Collapse>
         </Container>
