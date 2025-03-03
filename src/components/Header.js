@@ -35,13 +35,13 @@ function Header({ darkMode, toggleDarkMode }) {
               <Nav.Link href="/">HOME</Nav.Link>
               <NavDropdown title="PORTFOLIO" id="basic-nav-dropdown">
                 <NavDropdown.Item>
-                  <Link to="/portfolio1" Little Lemon Restaurant>
+                  <Link to="/portfolio1" Little Lemon Restaurant />
                 </NavDropdown.Item>
-                <NavDropdown.Item href="/portfolio2">
-                  Wordle Game Website
+                <NavDropdown.Item>
+                  <Link to="/portfolio2" Wordle Game Website />
                 </NavDropdown.Item>
-                <NavDropdown.Item href="/portfolio3">
-                  Portfolio Website
+                <NavDropdown.Item>
+                  <Link to="/portfolio3" Portfolio Website />
                 </NavDropdown.Item>
                 <NavDropdown.Divider />
                 <NavDropdown.Item
