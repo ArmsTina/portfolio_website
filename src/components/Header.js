@@ -1,5 +1,6 @@
 import React from "react";
 import Container from "react-bootstrap/Container";
+import { Link } from "react-router-dom";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
@@ -33,8 +34,8 @@ function Header({ darkMode, toggleDarkMode }) {
             <Nav className="ms-auto">
               <Nav.Link href="/">HOME</Nav.Link>
               <NavDropdown title="PORTFOLIO" id="basic-nav-dropdown">
-                <NavDropdown.Item href="/portfolio1">
-                  Little Lemon Restaurant
+                <NavDropdown.Item>
+                  <Link to="/portfolio1" Little Lemon Restaurant>
                 </NavDropdown.Item>
                 <NavDropdown.Item href="/portfolio2">
                   Wordle Game Website
