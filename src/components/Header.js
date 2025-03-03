@@ -13,8 +13,8 @@ function Header({ darkMode, toggleDarkMode }) {
     <div className={`header ${darkMode ? "dark-mode" : "light-mode"}`}>
       <Navbar expand="lg">
         <Container fluid>
-          <Navbar.Brand className="me-auto" href="/">
-            DONGYOUNG YANG
+          <Navbar.Brand className="me-auto">
+            <Link to="/">DONGYOUNG YANG</Link>
           </Navbar.Brand>
 
           <div className="d-flex align-items-center order-md-1 order-lg-2">
@@ -32,16 +32,16 @@ function Header({ darkMode, toggleDarkMode }) {
             className="order-md-2 order-lg-1"
           >
             <Nav className="ms-auto">
-              <Nav.Link href="/">HOME</Nav.Link>
+              <Nav.Link><Link to="/">HOME</Link></Nav.Link>
               <NavDropdown title="PORTFOLIO" id="basic-nav-dropdown">
                 <NavDropdown.Item>
-                  <Link to="/portfolio1" Little Lemon Restaurant />
+                  <Link to="/portfolio1">Little Lemon Restaurant</Link>
                 </NavDropdown.Item>
                 <NavDropdown.Item>
-                  <Link to="/portfolio2" Wordle Game Website />
+                  <Link to="/portfolio2" >Wordle Game Website</Link>
                 </NavDropdown.Item>
                 <NavDropdown.Item>
-                  <Link to="/portfolio3" Portfolio Website />
+                  <Link to="/portfolio3">Portfolio Website</Link>
                 </NavDropdown.Item>
                 <NavDropdown.Divider />
                 <NavDropdown.Item
@@ -52,7 +52,7 @@ function Header({ darkMode, toggleDarkMode }) {
                   More Projects on Github!
                 </NavDropdown.Item>
               </NavDropdown>
-              <Nav.Link href="/contact">CONTACT</Nav.Link>
+              <Nav.Link><Link to="/contact">CONTACT</Link></Nav.Link>
             </Nav>
           </Navbar.Collapse>
         </Container>
