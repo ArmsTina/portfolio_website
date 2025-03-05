@@ -1,5 +1,6 @@
 import React from "react";
 import Container from "react-bootstrap/Container";
+import { Link } from "react-router-dom";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
@@ -12,7 +13,7 @@ function Header({ darkMode, toggleDarkMode }) {
     <div className={`header ${darkMode ? "dark-mode" : "light-mode"}`}>
       <Navbar expand="lg">
         <Container fluid>
-          <Navbar.Brand className="me-auto" href="/">
+          <Navbar.Brand as={Link} to="/" className="me-auto">
             DONGYOUNG YANG
           </Navbar.Brand>
 
@@ -31,15 +32,17 @@ function Header({ darkMode, toggleDarkMode }) {
             className="order-md-2 order-lg-1"
           >
             <Nav className="ms-auto">
-              <Nav.Link href="/">HOME</Nav.Link>
+              <Nav.Link as={Link} to="/">
+                HOME
+              </Nav.Link>
               <NavDropdown title="PORTFOLIO" id="basic-nav-dropdown">
-                <NavDropdown.Item href="/portfolio1">
+                <NavDropdown.Item as={Link} to="/portfolio1">
                   Little Lemon Restaurant
                 </NavDropdown.Item>
-                <NavDropdown.Item href="/portfolio2">
+                <NavDropdown.Item as={Link} to="/portfolio2">
                   Wordle Game Website
                 </NavDropdown.Item>
-                <NavDropdown.Item href="/portfolio3">
+                <NavDropdown.Item as={Link} to="/portfolio3">
                   Portfolio Website
                 </NavDropdown.Item>
                 <NavDropdown.Divider />
@@ -51,7 +54,9 @@ function Header({ darkMode, toggleDarkMode }) {
                   More Projects on Github!
                 </NavDropdown.Item>
               </NavDropdown>
-              <Nav.Link href="/contact">CONTACT</Nav.Link>
+              <Nav.Link as={Link} to="/contact">
+                CONTACT
+              </Nav.Link>
             </Nav>
           </Navbar.Collapse>
         </Container>
