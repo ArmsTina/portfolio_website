@@ -57,7 +57,7 @@ export default function Home({ darkMode }) {
           </Button>
           <Button
             variant={`${darkMode ? "dark" : "light"}`}
-            href="https://github.com/ArmsTina/portfolio_website/blob/4aa6c8b20835900c982cea54423651b449793366/src/assets/Dongyoung%20Yang%20-%20Resume.pdf"
+            href="https://github.com/ArmsTina/portfolio_website/blob/main/src/assets/Dongyoung%20Yang%20-%20Resume.pdf"
             target="_blank"
             rel="noopener noreferrer"
             className="button-Home m-2"
