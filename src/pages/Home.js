@@ -118,15 +118,15 @@ export default function Home({ darkMode }) {
                 </Card.Title>
                 <ListGroup variant="flush" className="text-start">
                   <ListGroup.Item>
-                    <span className="bold">Frontend:</span> JavaScript, HTML,
-                    CSS, SCSS, Bootstrap, React
+                    <span className="bold">Frontend:</span> JavaScript, React,
+                    HTML, CSS, SCSS, Bootstrap
                   </ListGroup.Item>
                   <ListGroup.Item>
                     <span className="bold">Backend:</span> Node.js, Express.js,
-                    MongoDB, SQL
+                    SQL
                   </ListGroup.Item>
                   <ListGroup.Item>
-                    <span className="bold">Database:</span> MySQL, MongoDB
+                    <span className="bold">Database:</span> MongoDB, MySQL
                   </ListGroup.Item>
                   <ListGroup.Item>
                     <span className="bold">Tools & Platforms:</span> Git, Github
