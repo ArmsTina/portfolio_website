@@ -119,7 +119,7 @@ export default function Home({ darkMode }) {
                 <ListGroup variant="flush" className="text-start">
                   <ListGroup.Item>
                     <span className="bold">Frontend:</span> JavaScript, React,
-                    HTML, CSS, SCSS, Bootstrap
+                    jQuery, HTML, CSS, SCSS, Bootstrap
                   </ListGroup.Item>
                   <ListGroup.Item>
                     <span className="bold">Backend:</span> Node.js, Express.js,
