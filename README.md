@@ -24,7 +24,7 @@ This portfolio website serves as a comprehensive overview of my web development 
 
 - **Home Page:** An introduction and overview of my background and skills.
 - **Portfolio Pages (1-3):** Detailed showcases of my projects, including descriptions, images, and links to live demos and GitHub repositories.
-- **Contact Page:** A form and email address for easy communication.
+- **Contact Page:** A form to send an email for easy communication.
 
 ## Features
 
