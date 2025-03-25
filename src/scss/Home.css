@@ -48,7 +48,9 @@
   height: 50px;
   font-size: 1.2rem;
 }
-
+.text-green {
+  color: #03fdae;
+}
 /* Responsive settings */
 @media screen and (max-width: 768px) {
   #home-background .profileImage {
@@ -60,4 +62,4 @@
     margin-top: 50px;
     max-width: 250px;
   }
-}/*# sourceMappingURL=Home.css.map */
+} /*# sourceMappingURL=Home.css.map */

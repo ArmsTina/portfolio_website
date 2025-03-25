@@ -7,6 +7,7 @@ import NavDropdown from "react-bootstrap/NavDropdown";
 import "../scss/Header.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCircleHalfStroke } from "@fortawesome/free-solid-svg-icons";
+import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 
 function Header({ darkMode, toggleDarkMode }) {
   return (
@@ -15,6 +16,22 @@ function Header({ darkMode, toggleDarkMode }) {
         <Container fluid>
           <Navbar.Brand as={Link} to="/" className="me-auto">
             DONGYOUNG YANG
+            <a
+              href="https://github.com/ArmsTina"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="ms-3"
+            >
+              <FontAwesomeIcon icon={faGithub} className="icon fa-lg" />
+            </a>
+            <a
+              href="https://www.linkedin.com/in/dongyoung1999/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="ms-3"
+            >
+              <FontAwesomeIcon icon={faLinkedin} className="icon fa-lg" />
+            </a>
           </Navbar.Brand>
 
           <div className="d-flex align-items-center order-md-1 order-lg-2">

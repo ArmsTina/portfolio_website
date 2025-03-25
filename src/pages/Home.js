@@ -41,8 +41,9 @@ export default function Home({ darkMode }) {
                   minor at the University of Arizona.
                 </h2>
                 <h2 className="mb-5">
-                  I'm passionate about front-end web development and also dabble
-                  with backend technologies.
+                  I'm passionate about{" "}
+                  <span className="text-green">Front-end web development </span>
+                  and also dabble with Back-end technologies.
                 </h2>
               </div>
             </Col>
@@ -95,6 +96,10 @@ export default function Home({ darkMode }) {
                   <ListGroup.Item>
                     <span className="bold">Expected Graduation:</span> May 2026
                   </ListGroup.Item>
+                  <ListGroup.Item>
+                    <span className="bold">Languages:</span> Korean (Native),
+                    English
+                  </ListGroup.Item>
                 </ListGroup>
               </Card.Body>
             </Card>
@@ -113,9 +118,7 @@ export default function Home({ darkMode }) {
                     darkMode ? "card-icon-dark" : ""
                   }`}
                 />
-                <Card.Title className="bold cardTitle text-green">
-                  Skills
-                </Card.Title>
+                <Card.Title className="bold cardTitle">Skills</Card.Title>
                 <ListGroup variant="flush" className="text-start">
                   <ListGroup.Item>
                     <span className="bold">Frontend:</span> JavaScript, React,
@@ -136,7 +139,7 @@ export default function Home({ darkMode }) {
                     <span className="bold">Game Development:</span> Unity, C#
                   </ListGroup.Item>
                   <ListGroup.Item>
-                    <span className="bold">Other Languages:</span> Java
+                    <span className="bold">Others:</span> Java
                   </ListGroup.Item>
                 </ListGroup>
               </Card.Body>
@@ -156,9 +159,7 @@ export default function Home({ darkMode }) {
                     darkMode ? "card-icon-dark" : ""
                   }`}
                 />
-                <Card.Title className="bold cardTitle text-green">
-                  Experience
-                </Card.Title>
+                <Card.Title className="bold cardTitle">Experience</Card.Title>
                 <ListGroup variant="flush" className="text-start">
                   <ListGroup.Item>
                     <span className="bold">
@@ -170,7 +171,13 @@ export default function Home({ darkMode }) {
                     <span className="bold">
                       Professional Esports Player / Coach:
                     </span>{" "}
-                    SGA Incheon
+                    <a
+                      href="https://liquipedia.net/rainbowsix/Arms_Tina"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      SGA Incheon
+                    </a>
                   </ListGroup.Item>
                   <ListGroup.Item>
                     <span className="bold">Military Service:</span> Anyang Manan
