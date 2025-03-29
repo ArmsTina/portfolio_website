@@ -35,7 +35,9 @@ export default function Home({ darkMode }) {
               <div
                 className={`introduction mt-4 mb-4 mt-lg-5 mb-lg-5 text-white`}
               >
-                <h1 className="mb-3 p-3 bold">Hello, I'm Dongyoung</h1>
+                <h1 className="mb-3 p-3 bold">
+                  Hello, I'm <span className="text-green">Dongyoung</span>
+                </h1>
                 <h2 className="mb-3">
                   A Computer Science major with a Game Design and Development
                   minor at the University of Arizona.
