@@ -14,8 +14,10 @@ function Header({ darkMode, toggleDarkMode }) {
     <div className={`header ${darkMode ? "dark-mode" : "light-mode"}`}>
       <Navbar expand="lg">
         <Container fluid>
-          <Navbar.Brand as={Link} to="/" className="me-auto">
-            DONGYOUNG YANG
+          <div className="me-auto">
+            <Navbar.Brand as={Link} to="/" className="m-0">
+              DONGYOUNG YANG
+            </Navbar.Brand>
             <a
               href="https://github.com/ArmsTina"
               target="_blank"
@@ -32,7 +34,7 @@ function Header({ darkMode, toggleDarkMode }) {
             >
               <FontAwesomeIcon icon={faLinkedin} className="icon fa-lg" />
             </a>
-          </Navbar.Brand>
+          </div>
 
           <div className="d-flex align-items-center order-md-1 order-lg-2">
             <span
