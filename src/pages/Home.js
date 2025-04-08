@@ -1,19 +1,46 @@
-import { React } from "react";
+import React from "react";
 import "../scss/Home.css";
-import {
-  ListGroup,
-  Container,
-  Row,
-  Col,
-  Image,
-  Card,
-  Button,
-} from "react-bootstrap";
+import { Container, Row, Col, Image, Button } from "react-bootstrap";
 import profileImage from "../assets/Spring_SGA_Arms_Tina.png";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import InfoCard from "../components/InfoCard";
+import cardsData from "../assets/cardsData.json";
 import { faBook, faPencil, faUserTie } from "@fortawesome/free-solid-svg-icons";
 
 export default function Home({ darkMode }) {
+  const iconMap = {
+    faBook,
+    faPencil,
+    faUserTie,
+  };
+
+  const renderItem = (item, idx) => {
+    if (item.type === "text") {
+      return (
+        <span key={idx} className={item.bold ? "bold" : ""}>
+          {item.value}
+        </span>
+      );
+    }
+    if (item.type === "pair") {
+      return (
+        <span key={idx}>
+          <span className="bold">{item.label}</span> {item.value}
+        </span>
+      );
+    }
+    if (item.type === "link") {
+      return (
+        <span key={idx}>
+          <span className="bold">{item.label}</span>{" "}
+          <a href={item.href} target="_blank" rel="noopener noreferrer">
+            {item.value}
+          </a>
+        </span>
+      );
+    }
+    return null;
+  };
+
   return (
     <div
       id="home-background"
@@ -69,138 +96,19 @@ export default function Home({ darkMode }) {
           </Button>
         </div>
       </Container>
+
       <Container fluid className="mt-3 mb-5 animated-delay">
         <Row>
-          <Col md={12} xl={4} className="mt-xl-0 mt-4 center">
-            <Card
-              className={`roundCard shadow-sm ${
-                darkMode ? "dark-mode" : "light-mode"
-              }`}
-            >
-              <Card.Body className="p-4">
-                <FontAwesomeIcon
-                  icon={faBook}
-                  className={`card-icon-light ${
-                    darkMode ? "card-icon-dark" : ""
-                  }`}
-                />
-                <Card.Title className="bold cardTitle">Biography</Card.Title>
-                <ListGroup variant="flush" className="text-start">
-                  <ListGroup.Item>
-                    <span className="bold">University of Arizona</span>
-                  </ListGroup.Item>
-                  <ListGroup.Item>
-                    B.A. in Computer Science, Minor in Game Design & Dev
-                  </ListGroup.Item>
-                  <ListGroup.Item>
-                    <span className="bold">GPA:</span> 4.00/4.00
-                  </ListGroup.Item>
-                  <ListGroup.Item>
-                    <span className="bold">Expected Graduation:</span> May 2026
-                  </ListGroup.Item>
-                  <ListGroup.Item>
-                    <span className="bold">Languages:</span> Korean (Native),
-                    English
-                  </ListGroup.Item>
-                </ListGroup>
-              </Card.Body>
-            </Card>
-          </Col>
-
-          <Col md={12} xl={4} className="mt-xl-0 mt-5 center">
-            <Card
-              className={`roundCard shadow-sm ${
-                darkMode ? "dark-mode" : "light-mode"
-              }`}
-            >
-              <Card.Body className="p-4">
-                <FontAwesomeIcon
-                  icon={faPencil}
-                  className={`card-icon-light ${
-                    darkMode ? "card-icon-dark" : ""
-                  }`}
-                />
-                <Card.Title className="bold cardTitle">Skills</Card.Title>
-                <ListGroup variant="flush" className="text-start">
-                  <ListGroup.Item>
-                    <span className="bold">Frontend:</span> JavaScript, React,
-                    jQuery, HTML, CSS, SCSS, Bootstrap
-                  </ListGroup.Item>
-                  <ListGroup.Item>
-                    <span className="bold">Backend:</span> Node.js, Express.js,
-                    SQL
-                  </ListGroup.Item>
-                  <ListGroup.Item>
-                    <span className="bold">Database:</span> MongoDB, MySQL
-                  </ListGroup.Item>
-                  <ListGroup.Item>
-                    <span className="bold">Tools & Platforms:</span> Git, Github
-                    AWS, DigitalOcean, Google Sheets, MSOffice
-                  </ListGroup.Item>
-                  <ListGroup.Item>
-                    <span className="bold">Game Development:</span> Unity, C#
-                  </ListGroup.Item>
-                  <ListGroup.Item>
-                    <span className="bold">Others:</span> Java
-                  </ListGroup.Item>
-                </ListGroup>
-              </Card.Body>
-            </Card>
-          </Col>
-
-          <Col md={12} xl={4} className="mt-xl-0 mt-5 center">
-            <Card
-              className={`roundCard shadow-sm ${
-                darkMode ? "dark-mode" : "light-mode"
-              }`}
-            >
-              <Card.Body className="p-4">
-                <FontAwesomeIcon
-                  icon={faUserTie}
-                  className={`card-icon-light ${
-                    darkMode ? "card-icon-dark" : ""
-                  }`}
-                />
-                <Card.Title className="bold cardTitle">Experience</Card.Title>
-                <ListGroup variant="flush" className="text-start">
-                  <ListGroup.Item>
-                    <span className="bold">
-                      Student Special Events Parking Monitor:
-                    </span>{" "}
-                    University of Arizona Parking and Transportation
-                  </ListGroup.Item>
-                  <ListGroup.Item>
-                    <span className="bold">
-                      Professional Esports Player / Coach:
-                    </span>{" "}
-                    <a
-                      href="https://liquipedia.net/rainbowsix/Arms_Tina"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      SGA Incheon
-                    </a>
-                  </ListGroup.Item>
-                  <ListGroup.Item>
-                    <span className="bold">Military Service:</span> Anyang Manan
-                    Police Station
-                  </ListGroup.Item>
-                  <ListGroup.Item>
-                    <span className="bold">Projects:</span> Web & Game
-                    Development (Check my{" "}
-                    <a
-                      href="https://github.com/ArmsTina"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      Github!
-                    </a>
-                    )
-                  </ListGroup.Item>
-                </ListGroup>
-              </Card.Body>
-            </Card>
-          </Col>
+          {cardsData.map((card, i) => (
+            <Col key={i} md={12} xl={4} className="mt-xl-0 mt-5 center">
+              <InfoCard
+                icon={iconMap[card.icon]}
+                title={card.title}
+                darkMode={darkMode}
+                items={card.items.map((item, index) => renderItem(item, index))}
+              />
+            </Col>
+          ))}
         </Row>
       </Container>
     </div>

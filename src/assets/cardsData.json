@@ -1,0 +1,72 @@
+[
+  {
+    "icon": "faBook",
+    "title": "Biography",
+    "items": [
+      { "type": "text", "value": "University of Arizona", "bold": true },
+      {
+        "type": "text",
+        "value": "B.A. in Computer Science, Minor in Game Design & Dev"
+      },
+      { "type": "pair", "label": "GPA:", "value": "4.00/4.00" },
+      { "type": "pair", "label": "Expected Graduation:", "value": "May 2026" },
+      {
+        "type": "pair",
+        "label": "Languages:",
+        "value": "Korean (Native), English"
+      }
+    ]
+  },
+  {
+    "icon": "faPencil",
+    "title": "Skills",
+    "items": [
+      {
+        "type": "pair",
+        "label": "Front-end:",
+        "value": "JavaScript, React, jQuery, HTML, CSS, SCSS, Bootstrap"
+      },
+      {
+        "type": "pair",
+        "label": "Back-end:",
+        "value": "Node.js, Express.js, SQL"
+      },
+      { "type": "pair", "label": "Database:", "value": "MongoDB, MySQL" },
+      {
+        "type": "pair",
+        "label": "Tools & Platforms:",
+        "value": "Git, Github, AWS, DigitalOcean, Google Sheets, MSOffice"
+      },
+      { "type": "pair", "label": "Game Development:", "value": "Unity, C#" },
+      { "type": "pair", "label": "Others:", "value": "Java" }
+    ]
+  },
+  {
+    "icon": "faUserTie",
+    "title": "Experience",
+    "items": [
+      {
+        "type": "pair",
+        "label": "Student Special Events Parking Monitor:",
+        "value": "University of Arizona Parking and Transportation"
+      },
+      {
+        "type": "link",
+        "label": "Professional Esports Player / Coach:",
+        "value": "SGA Incheon",
+        "href": "https://liquipedia.net/rainbowsix/Arms_Tina"
+      },
+      {
+        "type": "pair",
+        "label": "Military Service:",
+        "value": "Anyang Manan Police Station"
+      },
+      {
+        "type": "link",
+        "label": "Projects:",
+        "value": "Web & Game Development (Check my Github!)",
+        "href": "https://github.com/ArmsTina"
+      }
+    ]
+  }
+]
