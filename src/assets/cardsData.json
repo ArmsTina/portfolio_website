@@ -31,7 +31,11 @@
         "label": "Back-end:",
         "value": "Node.js, Express.js, SQL"
       },
-      { "type": "pair", "label": "Database:", "value": "MongoDB, MySQL" },
+      {
+        "type": "pair",
+        "label": "Database:",
+        "value": "MongoDB, PostgreSQL, MySQL"
+      },
       {
         "type": "pair",
         "label": "Tools & Platforms:",

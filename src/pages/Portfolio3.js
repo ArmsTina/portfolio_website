@@ -65,7 +65,7 @@ export default function Portfolio3({ darkMode }) {
                   <p>
                     Contact me via the form or email at{" "}
                     <span className="text-primary">
-                      didehddud1005@gmail.com
+                      dongyoung.yangkr@gmail.com
                     </span>
                   </p>
                 </Carousel.Caption>
