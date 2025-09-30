@@ -3,7 +3,7 @@ import "../scss/Home.css";
 import { Container, Row, Col, Image, Button } from "react-bootstrap";
 import profileImage from "../assets/Spring_SGA_Arms_Tina.png";
 import InfoCard from "../components/InfoCard";
-import cardsData from "../assets/cardsData.json";
+import cardsData from "../data/cardsData.json";
 import { faBook, faPencil, faUserTie } from "@fortawesome/free-solid-svg-icons";
 
 export default function Home({ darkMode }) {

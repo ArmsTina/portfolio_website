@@ -3,11 +3,10 @@ import "./App.css";
 import Header from "./components/Header";
 import Home from "./pages/Home";
 import Footer from "./components/Footer";
-import Portfolio1 from "./pages/Portfolio1";
-import Portfolio2 from "./pages/Portfolio2";
-import Portfolio3 from "./pages/Portfolio3";
+import Portfolio from "./pages/Portfolio";
 import Contact from "./pages/Contact";
 import React, { useState, useEffect } from "react";
+import NotFound from "./pages/NotFound";
 
 function App() {
   const [darkMode, setDarkMode] = useState(() => {
@@ -30,17 +29,13 @@ function App() {
         <Routes>
           <Route path="/" element={<Home darkMode={darkMode} />} />
           <Route
-            path="/portfolio1"
-            element={<Portfolio1 darkMode={darkMode} />}
-          />
+            path="/portfolio/:id"
+            element={<Portfolio darkMode={darkMode} />}
+          ></Route>
           <Route
-            path="/portfolio2"
-            element={<Portfolio2 darkMode={darkMode} />}
-          />
-          <Route
-            path="/portfolio3"
-            element={<Portfolio3 darkMode={darkMode} />}
-          />
+            path="*"
+            element={<NotFound darkMode={darkMode}></NotFound>}
+          ></Route>
           <Route path="/contact" element={<Contact darkMode={darkMode} />} />
         </Routes>
         <Footer darkMode={darkMode} />

@@ -8,7 +8,7 @@
         "type": "text",
         "value": "B.A. in Computer Science, Minor in Game Design & Dev"
       },
-      { "type": "pair", "label": "GPA:", "value": "4.00/4.00" },
+      { "type": "pair", "label": "GPA:", "value": "3.95/4.00" },
       { "type": "pair", "label": "Expected Graduation:", "value": "May 2026" },
       {
         "type": "pair",
@@ -24,7 +24,7 @@
       {
         "type": "pair",
         "label": "Front-end:",
-        "value": "JavaScript, React, jQuery, HTML, CSS, SCSS, Bootstrap"
+        "value": "JavaScript, React, TypeScript, jQuery, HTML, CSS, SCSS, Bootstrap"
       },
       {
         "type": "pair",
