@@ -1,19 +1,28 @@
-import React from "react";
 import "../scss/Home.css";
 import { Container, Row, Col, Image, Button } from "react-bootstrap";
 import profileImage from "../assets/Spring_SGA_Arms_Tina.png";
 import InfoCard from "../components/InfoCard";
 import cardsData from "../data/cardsData.json";
 import { faBook, faPencil, faUserTie } from "@fortawesome/free-solid-svg-icons";
+import type { IconDefinition } from "@fortawesome/fontawesome-svg-core";
 
-export default function Home({ darkMode }) {
-  const iconMap = {
-    faBook,
-    faPencil,
-    faUserTie,
-  };
+interface HomeProps {
+  darkMode: boolean;
+}
 
-  const renderItem = (item, idx) => {
+type CardItem =
+  | { type: "text"; bold?: boolean; value: string }
+  | { type: "pair"; label: string; value: string }
+  | { type: "link"; label: string; href: string; value: string };
+
+const iconMap: { [key: string]: IconDefinition } = {
+  faBook,
+  faPencil,
+  faUserTie,
+};
+
+const Home = ({ darkMode }: HomeProps) => {
+  const renderItem = (item: CardItem, idx: number): React.ReactNode => {
     if (item.type === "text") {
       return (
         <span key={idx} className={item.bold ? "bold" : ""}>
@@ -59,9 +68,7 @@ export default function Home({ darkMode }) {
               />
             </Col>
             <Col md={12} lg={7}>
-              <div
-                className={`introduction mt-4 mb-4 mt-lg-5 mb-lg-5 text-white`}
-              >
+              <div className="introduction mt-4 mb-4 mt-lg-5 mb-lg-5 text-white">
                 <h1 className="mb-3 p-3 bold">
                   Hello, I'm <span className="text-green">Dongyoung</span>
                 </h1>
@@ -105,7 +112,9 @@ export default function Home({ darkMode }) {
                 icon={iconMap[card.icon]}
                 title={card.title}
                 darkMode={darkMode}
-                items={card.items.map((item, index) => renderItem(item, index))}
+                items={card.items.map((item, index) =>
+                  renderItem(item as CardItem, index)
+                )}
               />
             </Col>
           ))}
@@ -113,4 +122,6 @@ export default function Home({ darkMode }) {
       </Container>
     </div>
   );
-}
+};
+
+export default Home;

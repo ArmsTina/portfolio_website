@@ -1,10 +1,13 @@
-import React from "react";
 import Container from "react-bootstrap/Container";
 import "../scss/Footer.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 
-function Footer({ darkMode }) {
+interface FooterProps {
+  darkMode: boolean;
+}
+
+const Footer = ({ darkMode }: FooterProps) => {
   return (
     <Container
       fluid
@@ -27,6 +30,6 @@ function Footer({ darkMode }) {
       <p>© Dongyoung Yang</p>
     </Container>
   );
-}
+};
 
 export default Footer;

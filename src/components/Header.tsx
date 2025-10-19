@@ -1,15 +1,16 @@
-import React from "react";
-import Container from "react-bootstrap/Container";
+import { Container, Nav, Navbar, NavDropdown } from "react-bootstrap";
 import { Link } from "react-router-dom";
-import Nav from "react-bootstrap/Nav";
-import Navbar from "react-bootstrap/Navbar";
-import NavDropdown from "react-bootstrap/NavDropdown";
 import "../scss/Header.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCircleHalfStroke } from "@fortawesome/free-solid-svg-icons";
 import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 
-function Header({ darkMode, toggleDarkMode }) {
+interface HeaderProps {
+  darkMode: boolean;
+  toggleDarkMode: () => void;
+}
+
+const Header = ({ darkMode, toggleDarkMode }: HeaderProps) => {
   return (
     <div className={`header ${darkMode ? "dark-mode" : "light-mode"}`}>
       <Navbar expand="lg">
@@ -82,6 +83,6 @@ function Header({ darkMode, toggleDarkMode }) {
       </Navbar>
     </div>
   );
-}
+};
 
 export default Header;

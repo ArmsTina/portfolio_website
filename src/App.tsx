@@ -1,25 +1,26 @@
+import { useState, useEffect } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./App.css";
+
 import Header from "./components/Header";
-import Home from "./pages/Home";
 import Footer from "./components/Footer";
+import Home from "./pages/Home";
 import Portfolio from "./pages/Portfolio";
 import Contact from "./pages/Contact";
-import React, { useState, useEffect } from "react";
 import NotFound from "./pages/NotFound";
 
-function App() {
-  const [darkMode, setDarkMode] = useState(() => {
+const App = () => {
+  const [darkMode, setDarkMode] = useState<boolean>(() => {
     const savedMode = localStorage.getItem("darkMode");
-    return savedMode === "true" || false;
+    return savedMode === "true";
   });
 
   useEffect(() => {
-    localStorage.setItem("darkMode", darkMode.toString());
+    localStorage.setItem("darkMode", String(darkMode));
   }, [darkMode]);
 
   const toggleDarkMode = () => {
-    setDarkMode(!darkMode);
+    setDarkMode((prevMode) => !prevMode);
   };
 
   return (
@@ -31,17 +32,14 @@ function App() {
           <Route
             path="/portfolio/:id"
             element={<Portfolio darkMode={darkMode} />}
-          ></Route>
-          <Route
-            path="*"
-            element={<NotFound darkMode={darkMode}></NotFound>}
-          ></Route>
+          />
           <Route path="/contact" element={<Contact darkMode={darkMode} />} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
         <Footer darkMode={darkMode} />
       </BrowserRouter>
     </div>
   );
-}
+};
 
 export default App;

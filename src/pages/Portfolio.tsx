@@ -1,8 +1,6 @@
-import React from "react";
 import { Link, useParams } from "react-router-dom";
 import "../scss/Portfolio.css";
 
-// Import all required components from react-bootstrap
 import {
   Carousel,
   Row,
@@ -13,7 +11,6 @@ import {
   Button,
   Image,
 } from "react-bootstrap";
-
 import portfolioData from "../data/portfolioData.json";
 
 import p1_1 from "../assets/portfolio1-1.png";
@@ -26,7 +23,36 @@ import p3_1 from "../assets/portfolio3-1.png";
 import p3_2 from "../assets/portfolio3-2.png";
 import p3_3 from "../assets/portfolio3-3.png";
 
-const imageMap = {
+interface PortfolioProps {
+  darkMode: boolean;
+}
+
+interface CarouselItem {
+  imageName: string;
+  alt: string;
+  captionTitle: string;
+  captionText: string;
+}
+
+interface FeatureSection {
+  title: string;
+  items: string[];
+}
+
+interface Project {
+  id: string;
+  title: string;
+  subtitle: string;
+  liveSiteUrl: string;
+  githubRepoUrl: string;
+  description: string;
+  carouselItems: CarouselItem[];
+  keyFeatures: FeatureSection;
+  technologies: FeatureSection;
+  contributions?: FeatureSection;
+}
+
+const imageMap: Record<string, string> = {
   "portfolio1-1.png": p1_1,
   "portfolio1-2.png": p1_2,
   "portfolio1-3.png": p1_3,
@@ -38,10 +64,9 @@ const imageMap = {
   "portfolio3-3.png": p3_3,
 };
 
-export default function Portfolio({ darkMode }) {
-  const { id } = useParams();
-
-  const project = portfolioData.find((p) => p.id === id);
+const Portfolio = ({ darkMode }: PortfolioProps) => {
+  const { id } = useParams<{ id: string }>();
+  const project: Project | undefined = portfolioData.find((p) => p.id === id);
 
   if (!project) {
     return (
@@ -49,7 +74,7 @@ export default function Portfolio({ darkMode }) {
         <div>
           <h2>Project Not Found</h2>
           <p>Sorry, the project you are looking for does not exist.</p>
-          <Button variant={"outline-light"} as={Link} to="/">
+          <Button variant={"outline-light"} as={Link as any} to="/">
             Return Home
           </Button>
         </div>
@@ -63,7 +88,6 @@ export default function Portfolio({ darkMode }) {
     >
       <Container fluid className="p-5">
         <Row className="d-flex v-center">
-          {/* Carousel Section */}
           <Col md={12} lg={7}>
             <Carousel className="animated">
               {project.carouselItems.map((item, index) => (
@@ -83,7 +107,6 @@ export default function Portfolio({ darkMode }) {
             </Carousel>
           </Col>
 
-          {/* Details Card Section */}
           <Col md={12} lg={5} className="mt-lg-0 mt-5">
             <Card
               className={`animated explaination shadow-sm ${
@@ -126,7 +149,6 @@ export default function Portfolio({ darkMode }) {
                   {project.description}
                 </Card.Text>
 
-                {/* Key Features Section */}
                 <Card.Text className="text-start bold">
                   {project.keyFeatures.title}
                 </Card.Text>
@@ -136,7 +158,6 @@ export default function Portfolio({ darkMode }) {
                   ))}
                 </ListGroup>
 
-                {/* Technologies Section */}
                 <Card.Text className="text-start bold mt-3">
                   {project.technologies.title}
                 </Card.Text>
@@ -146,7 +167,6 @@ export default function Portfolio({ darkMode }) {
                   ))}
                 </ListGroup>
 
-                {/* Contributions Section (conditionally rendered) */}
                 {project.contributions && (
                   <>
                     <Card.Text className="text-start bold mt-3">
@@ -166,4 +186,6 @@ export default function Portfolio({ darkMode }) {
       </Container>
     </div>
   );
-}
+};
+
+export default Portfolio;

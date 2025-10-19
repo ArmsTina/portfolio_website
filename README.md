@@ -37,6 +37,7 @@ This portfolio website serves as a comprehensive overview of my web development 
 ## Technologies Used
 
 - **React:** For building the user interface.
+- **TypeScript:** Refactored into TS
 - **React Bootstrap:** For responsive and customizable UI components.
 - **Formik:** For managing form state and handling form submissions.
 - **Yup:** For form validation.
@@ -55,37 +56,37 @@ This portfolio website serves as a comprehensive overview of my web development 
 2.  **Navigate to the project directory:**
 
     ```bash
-    cd 337_Final_Public
+    cd portfolio_website
     ```
 
 3.  **Install dependencies:**
 
     ```bash
-    npm install  # or yarn install
+    npm install
     ```
-    
+
 ## Environment Variables
 
 This project uses environment variables to store sensitive information, such as EmailJS keys. You will need to create a `.env` file in the root directory of the project and add the following variables:
 
--   `REACT_APP_Mail_Public_Key`: Your EmailJS public key.
--   `REACT_APP_Mail_Service_Key`: Your EmailJS service key.
--   `REACT_APP_Mail_Template_Key`: Your EmailJS template key.
+- `VITE_Mail_Public_Key`: Your EmailJS public key.
+- `VITE_Mail_Service_Key`: Your EmailJS service key.
+- `VITE_Mail_Template_Key`: Your EmailJS template key.
 
 ## Usage
 
 1.  **Start the development server:**
 
     ```bash
-    npm start  # or yarn start
+    npm run dev
     ```
 
 2.  **Open the website in your browser:**
 
-    Navigate to `http://localhost:3000` in your web browser.
+    Navigate to `http://localhost:5173` in your web browser.
 
 ## Contact
 
 For any inquiries or feedback, please feel free to contact me:
 
-- **Email:** didehddud1005@gmail.com
+- **Email:** dongyoungyang.kr@gmail.com

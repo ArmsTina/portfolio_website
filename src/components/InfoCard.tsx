@@ -1,8 +1,15 @@
-import React from "react";
 import { Card, ListGroup } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import type { IconDefinition } from "@fortawesome/fontawesome-svg-core";
 
-export default function InfoCard({ icon, title, items, darkMode }) {
+interface InfoCardProps {
+  icon: IconDefinition;
+  title: string;
+  items: React.ReactNode[];
+  darkMode: boolean;
+}
+
+const InfoCard = ({ icon, title, items, darkMode }: InfoCardProps) => {
   return (
     <Card
       className={`roundCard shadow-sm ${darkMode ? "dark-mode" : "light-mode"}`}
@@ -21,4 +28,6 @@ export default function InfoCard({ icon, title, items, darkMode }) {
       </Card.Body>
     </Card>
   );
-}
+};
+
+export default InfoCard;

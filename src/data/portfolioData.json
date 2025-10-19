@@ -145,6 +145,7 @@
       "title": "Technologies Used:",
       "items": [
         "⚛️ React: For dynamic UI rendering.",
+        "🟦 TypeScript: Adds static typing for safer, scalable development.",
         "🌐 React Bootstrap: For responsive components.",
         "🎨 CSS & SCSS: For unique styling and animations.",
         "📧 EmailJS: For seamless contact form functionality.",

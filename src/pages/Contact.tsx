@@ -1,48 +1,48 @@
-import React, { useRef, useState } from "react";
+import { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
-import {
-  Container,
-  Card,
-  Alert,
-  Button,
-  Form,
-  InputGroup,
-  Row,
-} from "react-bootstrap";
+import { Container, Card, Alert, Button, Form, Row } from "react-bootstrap";
 import "../scss/Contact.css";
-import * as formik from "formik";
+import { Formik, type FormikHelpers } from "formik";
 import * as Yup from "yup";
 
-export default function Contact({ darkMode }) {
-  const form = useRef();
+interface ContactProps {
+  darkMode: boolean;
+}
+
+interface FormValues {
+  name: string;
+  email: string;
+  message: string;
+}
+
+const Contact = ({ darkMode }: ContactProps) => {
+  const form = useRef<HTMLFormElement | null>(null);
   const [showSuccess, setShowSuccess] = useState(false);
   const [showError, setShowError] = useState(false);
 
-  const sendEmail = (values, { resetForm }) => {
-    emailjs
-      .sendForm(
-        process.env.REACT_APP_Mail_Service_Key,
-        process.env.REACT_APP_Mail_Template_Key,
-        form.current,
-        {
-          publicKey: process.env.REACT_APP_Mail_Public_Key,
-        }
-      )
-      .then(
-        () => {
-          setShowSuccess(true);
-          setShowError(false);
-          resetForm();
-        },
-        (error) => {
-          console.log(error);
-          setShowError(true);
-          setShowSuccess(false);
-        }
-      );
-  };
+  const sendEmail = (
+    _values: FormValues,
+    { resetForm }: FormikHelpers<FormValues>
+  ) => {
+    if (!form.current) return;
 
-  const { Formik } = formik;
+    const serviceId = import.meta.env.VITE_Mail_Service_Key;
+    const templateId = import.meta.env.VITE_Mail_Template_Key;
+    const publicKey = import.meta.env.VITE_Mail_Public_Key;
+
+    emailjs.sendForm(serviceId, templateId, form.current, { publicKey }).then(
+      () => {
+        setShowSuccess(true);
+        setShowError(false);
+        resetForm();
+      },
+      (error: string) => {
+        console.log("FAILED...", error);
+        setShowError(true);
+        setShowSuccess(false);
+      }
+    );
+  };
 
   const schema = Yup.object().shape({
     name: Yup.string().required("Please enter your name."),
@@ -63,7 +63,6 @@ export default function Contact({ darkMode }) {
           <Alert
             variant="success"
             onClose={() => setShowSuccess(false)}
-            style={{ maxWidth: "400px", margin: "auto" }}
             dismissible
           >
             Your message has been sent successfully!
@@ -74,12 +73,12 @@ export default function Contact({ darkMode }) {
           <Alert
             variant="danger"
             onClose={() => setShowError(false)}
-            style={{ maxWidth: "400px", margin: "auto" }}
             dismissible
           >
             Failed to send the message. Please try again later.
           </Alert>
         )}
+
         <Card className="shadow-lg card-contact">
           <Card.Body>
             <h1 className="mb-4">Contact</h1>
@@ -129,21 +128,19 @@ export default function Contact({ darkMode }) {
 
                     <Form.Group className="mb-3">
                       <Form.Label>Message</Form.Label>
-                      <InputGroup hasValidation>
-                        <Form.Control
-                          as="textarea"
-                          rows={6}
-                          className="shadow-sm rounded"
-                          placeholder="Write your message..."
-                          name="message"
-                          value={values.message}
-                          onChange={handleChange}
-                          isInvalid={touched.message && !!errors.message}
-                        />
-                        <Form.Control.Feedback type="invalid">
-                          {errors.message}
-                        </Form.Control.Feedback>
-                      </InputGroup>
+                      <Form.Control
+                        as="textarea"
+                        rows={6}
+                        className="shadow-sm rounded"
+                        placeholder="Write your message..."
+                        name="message"
+                        value={values.message}
+                        onChange={handleChange}
+                        isInvalid={touched.message && !!errors.message}
+                      />
+                      <Form.Control.Feedback type="invalid">
+                        {errors.message}
+                      </Form.Control.Feedback>
                     </Form.Group>
                   </Row>
                   <Button type="submit" variant="dark" className="w-100">
@@ -157,4 +154,6 @@ export default function Contact({ darkMode }) {
       </Container>
     </div>
   );
-}
+};
+
+export default Contact;
