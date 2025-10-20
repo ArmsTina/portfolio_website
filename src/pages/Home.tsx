@@ -78,8 +78,8 @@ const Home = ({ darkMode }: HomeProps) => {
                 </h2>
                 <h2 className="mb-5">
                   I'm passionate about{" "}
-                  <span className="text-green">Front-end web development </span>
-                  and also dabble with Back-end technologies.
+                  <span className="text-green">full-stack web development</span>
+                  .
                 </h2>
               </div>
             </Col>
