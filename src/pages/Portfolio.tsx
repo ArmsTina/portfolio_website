@@ -131,7 +131,9 @@ const Portfolio = ({ darkMode }: PortfolioProps) => {
                         target="_blank"
                         rel="noopener noreferrer"
                       >
-                        🌍 View Live Site
+                        {/https?:\/\/youtu\.be\//.test(project.liveSiteUrl)
+                          ? "▶️ View Intro Video"
+                          : "🌍 View Live Site"}
                       </Button>
                       <Button
                         variant={darkMode ? "outline-light" : "outline-dark"}
